@@ -1,13 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="index.js"></script>
+    <title>Projeto Intro-Web</title>
+    <script src="index.js">projeto2</script>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    
+    <header>
+        <h1 id="titulo-header">Lista de Filmes</h1>
+
+
+    </header>
+    <main class="blocos">
+        <section class="botao">
+
+            <input type="text" name="search" id="search-bar" placeholder="Busca...">
+
+            <button id="botao" type="submit" onclick=searchFilmes()>Buscar</button>
+
+
+
+        </section>
+
+        <li class="filmes" id="filme-1">
+            <section class="bloco">
+                <h3 id="interstellar"> <a target="_blank"
+                        href="https://www.youtube.com/watch?v=frD_IiY_A3E">Interestellar</h3></a>
+                <p>Duração de 170 minutos</p>
+                <p>Ficção Científica, Drama</p>
+                <p>Prêmios Recebidos: Oscar, Satellite Awards, Saturn Awards</p>
+
+                <figure>
+                    <img src="assets/wp1818231-interstellar-wallpapers.png">
+
+                </figure>
+            </section>
+        </li>
+        <li class="filmes" id="filme-2">
+
+            <section class="bloco" id="filme-2">
+
+                <h3 id="stawwars"><a target="_blank" href="https://www.youtube.com/watch?v=U_SsfAp_F9Y">
+                        Star Wars: Episódio IV – Uma Nova Esperança </a></h3>
+                <p>Duração de 120 minutos</p>
+                <p>Ficção Científica, Fantasia</p>
+                <p>Prêmios Recebidos: Oscar, Golden Globe, Grammy</p>
+
+                <figure id="poster-2">
+                    <img src="assets/starwars.png">
+
+                </figure>
+
+            </section>
+        </li>
+        <li class="filmes" id="filme-3">
+            <section class="bloco" id="filme-3">
+
+                <h3 id="dune"><a target="_blank" href="https://www.youtube.com/watch?v=Po1Z_X0FpzY">Dune</a></h3>
+                <p>Duração de 164 minutos</p>
+                <p>Ficção Científica, Aventura</p>
+                <p>Prêmios Recebidos: Oscar, Saturn Awards, Grammy</p>
+                <figure>
+                    <img src="assets/dune.png">
+
+                </figure>
+
+            </section>
+
+
+    </main>
+    <footer>
+        <h3 id="titulo-footer">Desenvolvido por Jessica Yve </h3>
+        <a target="_blank" href="https://github.com/jessicayve"><img id="github" src="assets/github (1).png"></a>
+    </footer>
 </body>
+
 </html>

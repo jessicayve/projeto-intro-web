@@ -1,77 +1,169 @@
-const objetosFilme1 = {
-    nomeDoFilme1: "Interestellar",
-    duracaoDoFilme1: 170,
-    eUmRemake1: false,
-    premiosFilme1: [" \"Oscar\", \"Satellite Awards\", \"Saturn Awards\""]
+filmes = [{
+    nome: "Interstellar",
+    duracao: 170,
+    eUmRemake: false,
+    premiosRecebidos: ["Oscar", "Satellite Awards", "Saturn Awards"]
+},
+{
+    nome: "Star Wars",
+    duracao: 120,
+    eUmRemake: false,
+    premiosRecebidos: ["Oscar", "Golden Globe", "Grammy"]
+},
+{
+    nome: "Dune",
+    duracao: 164,
+    eUmRemake: true,
+    premiosRecebidos: ["Oscar", "Grammy", "Saturn Awards"]
+
+}]
+
+// arrayParaGuardarObjetos = []
+
+
+// if (filme1.eUmRemake === true) {
+//     arrayParaGuardarObjetos.push(filme1)
+// } else {
+//     alert("Objeto do Filme 1 não adicionado")
+
+// } if (filme2.eUmRemake === true) {
+//     arrayParaGuardarObjetos.push(filme2)
+// } else {
+//     alert("Objeto do Filme 2 não adicionado")
+// } if (filme3.eUmRemake === true) {
+//     arrayParaGuardarObjetos.push(filme3)
+// } else {
+//     alert("Objeto do Filme 2 não adicionado")
+// }
+
+
+// console.log("Filmes que são remakes:", arrayParaGuardarObjetos)
+
+
+const mediaDuracao = 170 + 120 + 164 / 3
+console.log("Média de Duração:", mediaDuracao.toFixed(2))
+
+
+// const verificaRemakes = eUmRemake1 && eUmRemake2 && eUmRemake3
+// console.log("Remakes:",verificaRemakes)
+
+
+// console.log(nomeFilme1.toUpperCase())
+// console.log("Duração:", duracao1)
+// console.log("É um remake?", eUmRemake1)
+// console.log("Prêmios:", premiosRecebidos1)
+
+// console.log(nomeFilme2.toUpperCase())
+// console.log("Duração:", duracao2)
+// console.log("É um remake?", eUmRemake2)
+// console.log("Prêmios:", premiosRecebidos2)
+
+// console.log(nomeFilme3.toUpperCase())
+// console.log("Duração:", duracao3)
+// console.log("É um remake?", eUmRemake3)
+// console.log("Prêmios:", premiosRecebidos3)
+
+
+
+// console.log("nome: "+filmes[0].nome)
+// console.log("Duração: "+filmes[0].duracao)
+// console.log("É um remake? "+filmes[0].eUmRemake)
+// console.log("Prêmios: "+filmes[0].premiosRecebidos)
+
+// console.log("nome: "+filmes[1].nome)
+// console.log("Duração: "+filmes[1].duracao)
+// console.log("É um remake? "+filmes[1].eUmRemake)
+// console.log("Prêmios: "+filmes[1].premiosRecebidos)
+
+// console.log("nome: "+filmes[2].nome)
+// console.log("Duração: "+filmes[2].duracao)
+// console.log("É um remake? "+filmes[2].eUmRemake)
+// console.log("Prêmios: "+filmes[2].premiosRecebidos)
+
+// for (let i = 0; i < 1; i++) {
+//     console.log(filmes[0], filmes[1], filmes[2])
+// }
+
+
+function string(filmes) {
+
+    for (let i = 0; i < filmes.length; i++) {
+        console.log("O nome do filme é", filmes[i].nome.toUpperCase(), ".", "O filme tem ", filmes[i].duracao, "de duração.", "É um remake?", filmes[i].eUmRemake, "Os prêmios recebidos são", filmes[i].premiosRecebidos.join())
+    }
+}
+string(filmes)
+
+
+
+// const filme1Filter = filmes.filter((filme) => {
+//     if (filme.nome === "Interstellar" || filme.nome === "Star Wars" || filme.nome === "Dune") {
+//         return filme
+//     } else {
+//         return alert("Não encontrado")
+//     }
+// })
+
+
+// console.log("filter:", filme1Filter)
+
+
+function searchFilmes() {
+    let input = document.getElementById("search-bar").value;
+    input = input.toLowerCase();
+    let x = document.getElementsByClassName("filmes");
+
+    for (i = 0; i < x.length; i++) {
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+
+            x[i].style.display = "none";
+           
+        }
+        else {
+
+            x[i].style.display = "block";
+
+
+        }
+    }
+    if(input === "")
+    alert("Filme não encontrado")
 }
 
-const objetosFilme2 = {
-    nomeDoFilme2: "Star Wars",
-    duracaoDoFilme2: 120,
-    eUmRemake2: false,
-    premiosFilme2: [" \"Oscar\", \"Golden Globe\", \"Grammy\""]
-}
-
-const objetosFilme3 = {
-    nomeDoFilme3: "Dune",
-    duracaoDoFilme3: 164,
-    eUmRemake3: true,
-    premiosFilme3: [" \"Oscar\", \"Grammy\", \"Saturn Awards\""]
-}
 
 
-const arrayObjetos = []
+// let novoParagrafo = ""
+// let conteudoInput = ""
 
-if(objetosFilme1.eUmRemake1 === true ){
-    arrayObjetos.push(objetosFilme1)
-}else{
-    alert("Objeto não adicionado a array")
-} if(objetosFilme2.eUmRemake2 === true){
-    arrayObjetos.push(objetosFilme2)
-}else{
-    alert("Objeto não adcionado a array")
-}if(objetosFilme3.eUmRemake3 === true){
-    arrayObjetos.push(objetosFilme3)
-}else{
-    alert("Objeto não adicionado a array")
-}
+// const adicionar = () => {
+//     novoParagrafo = document.getElementById("paragrafo");
+//     conteudoInput = document.getElementById("texto");
+//     novoParagrafo.innerHtml += conteudoInput.value;
+//     conteudoInput.value ="";
+
+// }
+// const valorAtualInput = () =>{
+//     conteudoInput = document.getElementById("texto");
+//     console.log(conteudoInput.value)
+// }
 
 
 
-console.log("O filme que é remake foi adicionado aqui", arrayObjetos)
-
-// 3. Faça um cálculo de média, entre os valores numéricos respectivos de cada item.
-//Imprima o valor da média utilizando um console.log. Guarde este valor em uma const;
-
-const mediaDuraçaoDosFilmes = (objetosFilme1.duracaoDoFilme1 + objetosFilme2.duracaoDoFilme2 + objetosFilme3.duracaoDoFilme3) / 2
-console.log("Média da duração dos filmes:", mediaDuraçaoDosFilmes)
-
-// 4. Com um console.log, imprima o resultado de uma operação lógica que checa se todos os valores de variáveis booleanas
-// criadas até aqui são verdadeiras.
-
-const verificaSeEremake = objetosFilme1.eUmRemake1 && objetosFilme2.eUmRemake2 && objetosFilme3.eUmRemake3
-console.log("Todos os filmes são remakes?:", verificaSeEremake)
-
-// 5. Crie pelo menos mais uma característica para o item que você criou. Esta característica deve ser um array.
-//Mantenha o tipo de dado do array criado sempre o mesmo, isto é, se é um array de strings, só deve receber strings.
-
-
-// 6. Exiba um relatório utilizando console.log(), mostrando todos os dados de cada um dos itens criados até aqui
-//   1. O log deve exibir o dado de nome, título ou afim sempre em LETRAS MAIÚSCULAS, como no exemplo abaixo.
 
 
 
-const filmeInterstellar = `${objetosFilme1.nomeDoFilme1.toUpperCase()} \nDuração do filme: ${objetosFilme1.duracaoDoFilme1} minutos\nÉ um Remake?: ${objetosFilme1.eUmRemake1}\nPrémios Recebidos: ${objetosFilme1.premiosFilme1} `
 
-console.log(filmeInterstellar)
 
-const filmeStarWars = `${objetosFilme2.nomeDoFilme2.toUpperCase()} \nDuração do filme: ${objetosFilme2.duracaoDoFilme2} minutos \nÉ um remake?: ${objetosFilme2.eUmRemake2}\nPrémios Recebidos: ${objetosFilme2.premiosFilme2} `
 
-console.log(filmeStarWars)
 
-const filmeDune = `${objetosFilme3.nomeDoFilme3.toUpperCase()} \nDuração do filme: ${objetosFilme3.duracaoDoFilme3} minutos \nÉ um remake?: ${objetosFilme3.eUmRemake3}\nPrémios Recebidos: ${objetosFilme3.premiosFilme3} `
 
-console.log(filmeDune)
+
+
+
+
+
+
+
+
 
 
 
